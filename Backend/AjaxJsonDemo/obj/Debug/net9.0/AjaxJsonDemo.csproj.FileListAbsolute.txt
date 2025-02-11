@@ -31,3 +31,4 @@ C:\Users\mrakj\Faks\Delo\B2_IT\Backend\AjaxJsonDemo\obj\Debug\net9.0\refint\Ajax
 C:\Users\mrakj\Faks\Delo\B2_IT\Backend\AjaxJsonDemo\obj\Debug\net9.0\AjaxJsonDemo.pdb
 C:\Users\mrakj\Faks\Delo\B2_IT\Backend\AjaxJsonDemo\obj\Debug\net9.0\AjaxJsonDemo.genruntimeconfig.cache
 C:\Users\mrakj\Faks\Delo\B2_IT\Backend\AjaxJsonDemo\obj\Debug\net9.0\ref\AjaxJsonDemo.dll
+C:\Users\mrakj\Faks\Delo\B2_IT\Backend\AjaxJsonDemo\obj\Debug\net9.0\AjaxJsonDemo.sourcelink.json
