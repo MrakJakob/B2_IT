@@ -1,0 +1,234 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;  /*  prevents forced scrolling */
+    background-color: #F3ECDC;
+    overflow: hidden;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f473e;
+    color: #F3ECDC;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main h1 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  
+    color: #1f473e;
+}
+
+.tableContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.peopleTable {
+    width: 100%;
+    border: 1px solid #333;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden; 
+    color: #1f473e;
+}
+
+.peopleTable th, .peopleTable td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.peopleTable tr:nth-child(even) {
+    background-color: #F3EDE5; 
+}
+
+.peopleTable tr:nth-child(odd) {
+    background-color: #E1E8E1; 	
+}
+
+.tableHeader {
+    color: #F3ECDC;
+    border-radius: 5px 5px 0 0;
+}
+
+.tableHeader th {
+    background-color: #1f473e;
+}
+
+.delRow {
+    max-width: 30px;
+    padding: 0 !important;
+}
+
+.delRow button {
+    /* no button style */
+    background: none;
+    border: none;
+    color: rgba(255, 0, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+
+tr:hover .delRow button {
+    cursor: pointer;
+    color: rgba(255, 0, 0, 1);
+}
+
+
+.addPerson {
+    height: 100%;
+    align-items: center;
+    padding: 30px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+}
+
+.addPerson input {
+    margin: 10px;
+    padding: 10px;
+   
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #1f473e;
+    background-color: #F3ECDC;
+    color: #1f473e;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.buttons button:disabled {
+    border: 2px solid #909090;
+    color: #909090;
+    /* disable hover effect */
+    pointer-events: none;
+    
+}
+
+.buttons button:hover {
+    background-color: #1f473e;
+    color: #F3ECDC;
+}
+
+.pagination button {
+    padding: 5px 10px;
+}
+
+.pagination {
+    justify-content: end;
+}
+
+#warning {
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Row addition animation */
+.newRow {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.newRow.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hideRow {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hideRow.hide {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+    html, body {
+        
+        overflow-x: hidden;
+    }
+
+    .main {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .tableContainer {
+        width: 80%;
+        padding-block: 0;
+    }
+
+    .peopleTable {
+        font-size: 14px;
+    }
+
+    .addPerson {
+        width: 80%;
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
+    .addPerson button {
+        width: 100%;
+    }
+
+    .delRow button {
+        color: rgba(255, 0, 0, 1);
+    }
+}

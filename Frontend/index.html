@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B2 IT naloga</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/755368ce4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  </head>
+  <body>
+    <div class="nav">B2 IT preverjanje znanja</div>
+
+    <div class="main">
+      <div class="tableContainer">
+        <h1>Seznam oseb <i class="fa-solid fa-users"></i></i>
+
+        </h1>
+        
+        <table id="table" class="peopleTable">
+          <tr class="tableHeader">
+            <th>Ime</th>
+            <th>Starost</th>
+          </tr>
+        </table>
+        <!-- Pagination Controls -->
+        <div id="pagination" class="buttons pagination">
+          <button onclick="previousPage()" id="prevBtn" >
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <span id="pageNumber">1</span>
+          <button onclick="nextPage()" id="nextBtn" >
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="addPerson">
+        <h1>Dodaj osebo <i class="fa-solid fa-user-plus"></i></h1>
+        
+        <p id="warning"></p>
+        <div class="inputs">
+            <input type="text" id="name" placeholder="Ime" />
+            <input type="number" id="age" placeholder="Starost" />
+        </div>
+        <div class="buttons">
+          <button onclick="addPerson(false)">Lokalno</button>
+          <button onclick="addPerson(true)">Na strežnik</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
