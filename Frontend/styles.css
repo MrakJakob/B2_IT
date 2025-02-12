@@ -14,10 +14,14 @@ html, body {
     align-items: center;
     background-color: #1f473e;
     color: #F3ECDC;
-    padding: 20px;
+    padding: 10px;
+}
+
+.nav h1 {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
+    margin-left: 10%;
 }
 
 .main {
@@ -196,6 +200,14 @@ tr:hover .delRow button {
     html, body {
         
         overflow-x: hidden;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .nav h1 {
+        margin-left: 0;
     }
 
     .main {

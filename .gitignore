@@ -1,0 +1,4 @@
+# Ignore compiled binaries
+Backend/AjaxJsonDemo/bin/
+Backend/AjaxJsonDemo/obj/
+

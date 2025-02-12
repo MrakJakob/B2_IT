@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 [Route("api/people")]
 [ApiController]
@@ -20,7 +19,6 @@ public class PeopleController : ControllerBase
     {
         // add new person to the start of the list
         people.Insert(0, newPerson);
-        // people.Add(newPerson);
         return people;
     }
 

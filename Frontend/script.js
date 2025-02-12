@@ -46,7 +46,6 @@ function renderTable(animation = false) {
 function nextPage() {
   if (currentPage < tableData.length / rowsPerPage) {
     currentPage++;
-    // showData(tableData);
     renderTable();
   }
 }
@@ -54,7 +53,6 @@ function nextPage() {
 function previousPage() {
   if (currentPage > 1) {
     currentPage--;
-    // showData(tableData);
     renderTable();
   }
 }
@@ -113,7 +111,6 @@ function removePerson(id) {
   const server = row.classList.contains("server");
 
   if (row) {
-    console.log(row);
     row.classList.add("hideRow"); 
     row.classList.add("hide"); // Trigger transition
 
@@ -127,7 +124,7 @@ function removePerson(id) {
       fetch(`http://localhost:5000/api/people/${id}`, { method: "DELETE" })
         .then((response) => {
           if (response.ok) {
-            console.log("Deleted from server");
+            // console.log("Deleted from server");
           }
         })
         .catch((error) => console.error(error));
